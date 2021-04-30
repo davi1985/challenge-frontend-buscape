@@ -1,0 +1,44 @@
+:root {
+  --red: #d62033;
+  --blue: #1990df;
+  --white: #ffffff;
+  --green: #22b14c;
+  --yellow-50: #ffcd00;
+  --yellow-100: #dbb000;
+  --yellow-150: #c49d00;
+
+  --gray-50: #f2f2f2;
+  --gray-100: #d6d6d6;
+  --gray-500: #757575;
+  --gray-700: #444444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px "Montserrat", sans-serif;
+  color: var(--gray-700);
+  background: var(--gray-100);
+}
+
+input,
+textarea {
+  font-family: "Open Sans";
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
+}

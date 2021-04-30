@@ -1,0 +1,142 @@
+.card {
+  position: absolute;
+  top: 1.5rem;
+  right: 10rem;
+
+  span {
+    width: 20px;
+    height: 20px;
+    background: var(--red);
+    padding: 0.25rem;
+    border-radius: 40%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+  }
+}
+
+.product_container {
+  height: 20rem;
+  background: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1120px;
+  margin: 1rem auto;
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.2);
+
+  .images {
+    display: flex;
+    padding: 1rem 0;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+
+    .small_img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 10rem;
+
+      img {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid var(--gray-100);
+        border-radius: 0.25rem;
+        max-width: 70px;
+      }
+    }
+
+    .large_img {
+      width: 20rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .description {
+    height: 100%;
+    width: 50%;
+    padding: 1rem;
+
+    .title {
+      height: 10.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--gray-100);
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      button.favorite {
+        background: transparent;
+        border: none;
+        margin-left: 1.5rem;
+        transition: filter 0.3s;
+
+        img {
+          width: 20px;
+        }
+
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+    }
+
+    .prices {
+      .price {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        span {
+          font-size: 1.5rem;
+          color: var(--green);
+
+          strong {
+            font-size: 2rem;
+          }
+        }
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: var(--green);
+          border: none;
+          padding: 0.5rem 1rem;
+          font-size: 1.2rem;
+          color: var(--gray-50);
+          border-radius: 0.25rem;
+          font-weight: 600;
+
+          img {
+            width: 20px;
+            height: 20px;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+
+      .special_price {
+        color: var(--gray-700);
+        margin-left: 1.2rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+
+        strong {
+          color: var(--green);
+        }
+      }
+    }
+  }
+}

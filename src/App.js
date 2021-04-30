@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react'
+import { Cart } from './components/Cart'
+import { Header } from './components/Header'
+import { Product } from './components/Product'
+import { getProducts } from './services/api'
 
-function App() {
+import './index.scss'
+
+export function App() {
+  const [productsList, setProductsList] = useState([])
+  const [cartOpened, setCartOpened] = useState(false)
+  const [quantity, setQuantity] = useState(0)
+  const [productsSelected, setProductsSelected] = useState([])
+
+  function fetchData() {
+    getProducts().then((products) => setProductsList(products))
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  function openCart() {
+    setCartOpened(true)
+  }
+
+  function closeCart() {
+    setCartOpened(false)
+  }
+
+  function addProductIntoCart(id) {
+    setQuantity(quantity + 1)
+
+    const selectedProducts = productsList.filter(
+      (product) => product.product.id === id
+    )
+
+    setProductsSelected((preveState) => preveState.concat(selectedProducts))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      <Header openCart={openCart} quantity={quantity} />
+      <Cart
+        cartOpened={cartOpened}
+        closeCart={closeCart}
+        products={productsSelected}
+      />
 
-export default App;
+      <div className="container">
+        {productsList.map((product, index) => (
+          <Product
+            product={product.product}
+            addProduct={() => addProductIntoCart(product.product.id)}
+            key={index}
+          />
+        ))}
+      </div>
+    </>
+  )
+}

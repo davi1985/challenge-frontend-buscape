@@ -1,0 +1,112 @@
+.cart {
+  background: var(--yellow-100);
+
+  .cart_container {
+    padding: 0.25rem;
+    max-width: 1120px;
+    margin: 0 auto;
+    position: relative;
+
+    button {
+      position: absolute;
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.5rem;
+      transition: filter 0.3s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    button.cart-close {
+      background: var(--red);
+      color: white;
+    }
+
+    .empty_card {
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button.close {
+        position: relative;
+        margin-left: 1rem;
+      }
+    }
+
+    button.remove {
+      position: absolute;
+      right: 0;
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.5rem;
+      transition: filter 0.3s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+
+    li.cart_item {
+      padding: 0.5rem;
+      position: relative;
+      list-style: none;
+      height: 10rem;
+      background: var(--yellow-150);
+      display: flex;
+      margin-bottom: 1rem;
+
+      .img {
+        display: flex;
+
+        img {
+          max-width: 200px;
+          max-height: 200px;
+          padding: 2rem;
+        }
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+          color: white;
+          margin-bottom: 1rem;
+        }
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .total {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-weight: 600;
+      margin-top: 1rem;
+
+      :first-child {
+        width: 100%;
+        border-bottom: 1px solid var(--gray-700);
+        text-align: right;
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.25rem;
+      }
+
+      span + span {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

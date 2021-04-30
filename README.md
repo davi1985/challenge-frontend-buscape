@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+<div align="center" id="top"> 
+  <img src="./src/assets/logo.png" alt="FrontendChallenge Frontend" style="width:150px"/>
+</div>
+&#xa0;
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Challenge Frontend</h1>
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+This project is a shopping cart to an frontend challenge.
 
-### `yarn start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<div align="center" id="top"> 
+  <img src="./src/assets/screen1.png" alt="Frontend" style="width:500px"/>
+</div>
+<br/>
+<div align="center" id="top"> 
+  <img src="./src/assets/screen2.png" alt="Frontend" style="width:500px"/>
+</div>
+<br/>
+<div align="center" id="top"> 
+  <img src="./src/assets/screen3.png" alt="Frontend" style="width:500px"/>
+</div>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features implemented
 
-### `yarn test`
+- [x] List of products
+- [x] Images gallery
+- [x] Add product into the cart
+- [ ] Remove product into the cart
+- [ ] Responsive layout
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] Bonus - Default image for broken images
 
-### `yarn build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The following tools were used in this project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [React](https://pt-br.reactjs.org/)
+- [Sass](https://sass-lang.com/)
+- [Axios](https://axios-http.com/)
+- [JSON Server](https://github.com/typicode/json-server)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Requirements
 
-### `yarn eject`
+Before starting 🏁, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Starting
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Clone this project
+$ git clone https://github.com/davi1985/challenge-frontend-buscape
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Access
+$ cd challenge-frontend-buscape
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Install dependencies
+$ yarn
 
-## Learn More
+# Run the server [http://localhost:3333/items]
+$ yarn server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# In other terminal tab run the project
+$ yarn start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# The server will initialize in the <http://localhost:3000>
+```
 
-### Code Splitting
+Made with 💜 by <a href="https://github.com/davi1985" target="_blank">Davi Silva</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="#top">Back to top</a>
